@@ -1,0 +1,9 @@
+@Complete
+Basic HTML structure
+Functionality for adding a new exercise
+Functionality for removing an exercise
+Add funny triathlon pics
+
+@Incomplete
+CSS styling
+Refactor js
