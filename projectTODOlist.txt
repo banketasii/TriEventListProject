@@ -3,7 +3,8 @@ Basic HTML structure
 Functionality for adding a new exercise
 Functionality for removing an exercise
 Add funny triathlon pics
+CSS Styling
 
 @Incomplete
-CSS styling
+Add icon next to event.  Run next to run etc...  If no event found use finish flag.
 Refactor js
