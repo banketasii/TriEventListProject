@@ -7,6 +7,11 @@ var openLI = '<li><span class="del-event-btn"><i class="fas fa-trash-alt"></i></
 var closeLIbeg = '<img class="event-icon" id="';
 var closeLIend = '"></li>';
 var addBtn = $(".add-event-btn");
+/* @Incomplete - Needs refactoring!!!  Too much stuff happening
+  in the event listeners
+  ***Update - Refactored a bit.  Still more to come.  Have to reconfigure typescript.
+  Causing error when compiling due to wrong library used.
+  */
 //Gets the iconName for the <li> tag
 function GetIconString(input) {
     var iconName;

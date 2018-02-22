@@ -4,7 +4,9 @@ Functionality for adding a new exercise
 Functionality for removing an exercise
 Add funny triathlon pics
 CSS Styling
+Add icon next to event.  Run next to run etc...  If no event found use finish flag.
+
 
 @Incomplete
-Add icon next to event.  Run next to run etc...  If no event found use finish flag.
+
 Refactor js
