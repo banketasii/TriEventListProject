@@ -12,15 +12,15 @@ html, body{
 
 body{
   background: 
-    -webkit-linear-gradient(to right, #ff0000, #ffffff 50%, #0000ff 100%);
+    -webkit-linear-gradient(to right, #ff0000 25%, #ffffff 50%, #0000ff 75%);
   background: 
-    -moz-linear-gradient(to right, #ff0000, #ffffff 50%, #0000ff 100%);
+    -moz-linear-gradient(to right, #ff0000 25%, #ffffff 50%, #0000ff 75%);
   background: 
-    -ms-linear-gradient(to right, #ff0000, #ffffff 50%, #0000ff 100%);
+    -ms-linear-gradient(to right, #ff0000 25%, #ffffff 50%, #0000ff 75%);
   background: 
-    -o-linear-gradient(to right, #ff0000, #ffffff 50%, #0000ff 100%);
+    -o-linear-gradient(to right, #ff0000 25%, #ffffff 50%, #0000ff 75%);
   background: 
-    linear-gradient(to right, #ff0000, #ffffff 50%, #0000ff 100%);
+    linear-gradient(to right, #ff0000 25%, #ffffff 50%, #0000ff 75%);
 }
 
 ul{
@@ -41,7 +41,7 @@ li:nth-child(2n){
   background-color: #f7f7f7;
 }
 
-li:hover .del-btn{
+li:hover .del-event-btn{
   width: 40px;
   opacity: 1;
 }
@@ -65,12 +65,12 @@ a{
   margin-top: 10%;
 }
 
-.add-btn{
+.add-event-btn{
   float: right;
   margin-top: 5px;
 }
 
-.del-btn{
+.del-event-btn{
   height: 40px;
   width: 0;
   background-color: #e74c3c;
@@ -83,7 +83,7 @@ a{
   opacity: 0;
 }
 
-.icon{
+.event-icon{
   float: right;
   border: none;
   border-radius: 10px;
@@ -94,52 +94,59 @@ a{
   margin-top: 2px;
 }
 
-.foot-img{
+.footer-img{
   width: 150px;
   height: 150px;  
-  border: 2px solid silver;
+  border: 2px solid blue;
   border-radius: 10px;
 }
 
+.credit{
+  margin-top: 100px;
+}
 
 /* CSS HTML id selectors */
-#event-list-box{
+#event-lstbox{
   width: 50%;
   margin-left: 25%;
   box-shadow: 0 0 3px rgba(0,0,0,0.1);
   border-radius: 10px;
 }
 
-#banner{
-  border: 2px solid silver;
+#event-lstbox-header{
+  border: 2px solid blue;
   border-radius: 10px;
   margin: 0;
   text-align: center;
 }
 
-#txtbx-event{
+#event-lstbox-txtbox{
   font-size: 18px;
   background-color: #f7f7f7;
   width: 100%;
   border-radius: 10px;
 }
 
-#txtbx-event:focus{
+#event-lstbox-txtbox:focus{
   background-color: #fff;
-  border: 2px solid yellow;
+  border: 2px solid red;
   outline: none;
 }
 
 #runIcon{
-  background-image: url("https://png.icons8.com/metro/50/000000/running.png");
+  background-image: url("../imgs/iconRun.svg");
 }
 
 #swimIcon{
-  background-image: url("https://png.icons8.com/metro/50/000000/swimming.png");
+  background-image: url("../imgs/iconSwim.svg");
+}
+
+#bikeIcon{
+  background-image: url("../imgs/iconBike.svg");
 }
 
 #finishIcon{
-  background-image: url("https://png.icons8.com/metro/50/000000/finish-flag.png");
+  background-image: url("../imgs/iconFinish.svg");
 }
 
 #footer-content{
@@ -150,23 +157,18 @@ a{
 #motto{
   width: 66%;
   margin: auto;
-  border: 2px solid silver;
+  border: 2px solid blue;
   border-radius: 10px;
 }
 
 #swim{
-  background-image: url(../imgs/swim.png);  
+  background-image: url(../imgs/imageSwim.png);  
 }
 
 #bike{
-  background-image: url(../imgs/bike.png);  
+  background-image: url(../imgs/imageBike.png);  
 }
 
 #run{
-  background-image: url(../imgs/run.png);  
+  background-image: url(../imgs/imageRun.png);  
 }
-
-#bikeIcon{
-  background-image: url("https://png.icons8.com/metro/50/000000/cycling-road.png");
-}
-
