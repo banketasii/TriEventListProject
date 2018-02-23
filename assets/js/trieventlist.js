@@ -1,20 +1,20 @@
+"use strict";
 /* Tri Event List Project JS */
-var ul = $("ul");
-var delBtns = $(".del-event-btn");
-var lis = $("li");
-var txtbx = $("#event-lstbox-txtbox");
-var openLI = '<li><span class="del-event-btn"><i class="fas fa-trash-alt"></i></span> ';
-var closeLIbeg = '<img class="event-icon" id="';
-var closeLIend = '"></li>';
-var addBtn = $(".add-event-btn");
+let ul = $("ul");
+let delBtns = $(".del-event-btn");
+let lis = $("li");
+let txtbx = $("#event-lstbox-txtbox");
+let openLI = '<li><span class="del-event-btn"><i class="fas fa-trash-alt"></i></span> ';
+let closeLIbeg = '<img class="event-icon" id="';
+let closeLIend = '"></li>';
+let addBtn = $(".add-event-btn");
 /* @Incomplete - Needs refactoring!!!  Too much stuff happening
   in the event listeners
-  ***Update - Refactored a bit.  Still more to come.  Have to reconfigure typescript.
-  Causing error when compiling due to wrong library used.
-  */
+  ***Update - Refactored a bit.  Still more to come.
+*/
 //Gets the iconName for the <li> tag
 function GetIconString(input) {
-    var iconName;
+    let iconName;
     input = input.toLowerCase();
     if (input.includes("swim")) {
         iconName = "swimIcon";
@@ -40,11 +40,13 @@ ul.on("click", ".del-event-btn", function (event) {
 });
 //Add new <li> tags
 txtbx.on("keypress", function (event) {
+    let txtInput;
+    let icon;
     if (event.which === 13) {
-        var txtInput = $(this).val().toString();
-        var icon = GetIconString(txtInput);
+        txtInput = txtbx.val().toString();
+        icon = GetIconString(txtInput);
         ul.append(openLI + txtInput + closeLIbeg + icon + closeLIend);
-        $(this).val("");
+        txtbx.val("");
     }
 });
 addBtn.on("click", function () {
