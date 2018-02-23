@@ -3,30 +3,39 @@
 let ul = $("ul");
 let delBtns = $(".del-event-btn");
 let lis = $("li");
-let txtbx = $("#event-lstbox-txtbox");
+let txtBx = $("#event-lstbox-txtbox");
 let openLI = '<li><span class="del-event-btn"><i class="fas fa-trash-alt"></i></span> ';
-let closeLIbeg = '<img class="event-icon" id="';
-let closeLIend = '"></li>';
+let closeLIBeg = '<img class="event-icon" id="';
+let closeLIEnd = 'Icon"></li>';
 let addBtn = $(".add-event-btn");
 /* @Incomplete - Needs refactoring!!!  Too much stuff happening
   in the event listeners
   ***Update - Refactored a bit.  Still more to come.
 */
-//Gets the iconName for the <li> tag
-function GetIconString(input) {
+//Gets the build string for ul's <li> tag
+function BuildLI(ele, oLI, cLIBeg, cLIEnd) {
+    let txtInput;
+    let icon;
+    txtInput = ele.val().toString();
+    ele.val("");
+    icon = GetIconName(txtInput);
+    return oLI + txtInput + cLIBeg + icon + cLIEnd;
+}
+//Gets the icon name for the <img class="event-icon"> tag
+function GetIconName(input) {
     let iconName;
     input = input.toLowerCase();
     if (input.includes("swim")) {
-        iconName = "swimIcon";
+        iconName = "swim";
     }
     else if (input.includes("run") || input.includes("jog")) {
-        iconName = "runIcon";
+        iconName = "run";
     }
     else if (input.includes("bike") || input.includes("cycle")) {
-        iconName = "bikeIcon";
+        iconName = "bike";
     }
     else {
-        iconName = "finishIcon";
+        iconName = "finish";
     }
     return iconName;
 }
@@ -39,16 +48,11 @@ ul.on("click", ".del-event-btn", function (event) {
     event.stopPropagation();
 });
 //Add new <li> tags
-txtbx.on("keypress", function (event) {
-    let txtInput;
-    let icon;
+txtBx.on("keypress", function (event) {
     if (event.which === 13) {
-        txtInput = txtbx.val().toString();
-        icon = GetIconString(txtInput);
-        ul.append(openLI + txtInput + closeLIbeg + icon + closeLIend);
-        txtbx.val("");
+        ul.append(BuildLI($(this), openLI, closeLIBeg, closeLIEnd));
     }
 });
 addBtn.on("click", function () {
-    txtbx.fadeToggle();
+    txtBx.fadeToggle();
 });
