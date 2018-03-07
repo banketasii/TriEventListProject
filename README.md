@@ -1,1 +1,1 @@
-"#Tri Event List Project" 
+# Tri Event List Project
